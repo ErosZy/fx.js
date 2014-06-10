@@ -5,6 +5,15 @@
     var fx = {},
         timeScale = 1000 / 60;
 
+    /**
+     * 缓冲运动
+     * @param obj
+     * @param cur
+     * @param target
+     * @param process
+     * @param complete
+     * @param fs
+     */
     fx.buffer = function(obj,cur,target,process,complete,fs){
         var x = 0,
             v = 0,
@@ -39,7 +48,16 @@
         },timeScale);
     }
 
-
+    /**
+     * 弹性运动
+     * @param obj
+     * @param cur
+     * @param target
+     * @param process
+     * @param complete
+     * @param fs
+     * @param ms
+     */
     fx.flex = function(obj,cur,target,process,complete,fs,ms){
         var x = 0,
             v = 0,
@@ -76,6 +94,15 @@
         },timeScale);
     }
 
+    /**
+     * 线性匀速运动
+     * @param obj
+     * @param cur
+     * @param target
+     * @param process
+     * @param complete
+     * @param fs
+     */
     fx.linear = function(obj,cur,target,process,complete,fs){
         var x = 0,
             v = 0,
@@ -112,5 +139,5 @@
     }
 
     window.fx = fx;
-    
+
 }(window))

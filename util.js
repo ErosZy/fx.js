@@ -4,6 +4,11 @@
 (function(window,undefined){
     var util = {};
 
+    /**
+     * 设置属性
+     * @param obj dom对象
+     * @param json 数形集合
+     */
     util.setStyle = function(obj,json){
         var self = this;
 
@@ -27,6 +32,12 @@
         }
     }
 
+    /**
+     * 设置CSS3属性
+     * @param obj dom节点
+     * @param attr 属性
+     * @param value 值
+     */
     util.setStyle3 = function(obj,attr,value){
         var self = this,
             key = attr.charAt(0).toUpperCase() + attr.slice(1),
@@ -37,9 +48,16 @@
         }
     }
 
+    /**
+     * 获得[n,m]范围的随机数
+     * @param n
+     * @param m
+     * @returns {*}
+     */
     util.rnd = function(n,m){
         return Math.random() * (m - n) + n ;
     }
 
     window.util = util;
+
 }(window))
